@@ -13,11 +13,19 @@ def filter_scores(scores: list[int]) -> list[int]:
     # Scores should be greater than or equal to 70
     # Scores should be less than or equal to 90
     # Scores should be even numbers
+    for score in scores:
+        if score < 70 or score > 90:
+            continue
+        elif score % 2 == 0:
+            filtered_scores.append(score)
 
     # Step 2: Sort scores from highest to lowest
     # Use the sort function with the reverse parameter
+    return sorted(filtered_scores, reverse=True)
+    
 
     # Step 3: Return the filtered and sorted list
+    
 
 
 def main():
